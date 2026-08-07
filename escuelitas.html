@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escuelitas - Mundialito</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back-link">&larr; Volver</a>
+    <h1>Escuelitas</h1>
+    <div class="controls">
+      <label class="filter-label" for="saldoFilter">
+        Filtrar por SALDO:
+        <select id="saldoFilter">
+          <option value="all">Todos</option>
+          <option value="gt0">Importes &gt; 0</option>
+          <option value="eq0">Importes = 0</option>
+          <option value="lt0">Importes &lt; 0</option>
+        </select>
+      </label>
+      <button id="refreshBtn">Actualizar</button>
+    </div>
+    <div id="status">Cargando...</div>
+  </header>
+  <main>
+    <div id="tableWrap"></div>
+  </main>
+
+  <script src="escuelitas.js"></script>
+</body>
+</html>
